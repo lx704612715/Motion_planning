@@ -1,0 +1,8 @@
+prefix=/home/lixing/path-planning/catkin_ws/devel
+
+Name: waypoint_generator
+Description: Description of waypoint_generator
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lixing/path-planning/catkin_ws/devel/lib 
+Requires: 

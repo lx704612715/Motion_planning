@@ -1,0 +1,8 @@
+prefix=/home/lixing/path-planning/catkin_ws/devel
+
+Name: grid_path_searcher
+Description: Description of grid_path_searcher
+Version: 0.0.1
+Cflags: -I/home/lixing/path-planning/catkin_ws/src/grid_path_searcher/include
+Libs: -L/home/lixing/path-planning/catkin_ws/devel/lib 
+Requires: 

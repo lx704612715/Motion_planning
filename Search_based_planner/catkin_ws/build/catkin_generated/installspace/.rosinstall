@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lixing/path-planning/catkin_ws/install/setup.sh
