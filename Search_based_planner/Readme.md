@@ -26,7 +26,7 @@ This report covers an assignment on implementing A* algorithm on ROS and matlab 
 + Optimal paht can be found by recursively searching the parent node of terminatePtr
 
 ####Result in 3D Case
-![](/home/lixing/path-planning/Document/img/3d.jpg "3D Case")
+![](img/3d.jpg "3D Case")
   
 
 ## Performance Analysis
@@ -43,7 +43,7 @@ I explored the influence of heuristic and tie-breaker to the performance of A* a
 | A* | Diagonal | True  | 5660 | 1939ms |
 | A* | Diagonal | False | 5984 | 1958ms |
 
-![](/home/lixing/path-planning/Document/img/2d.png "2D Case")
+![](img/2d.png "2D Case")
 ```cpp
     ## Diagonal heuristic in 3D space
     if (dist_metric == 3){
