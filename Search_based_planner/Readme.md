@@ -32,9 +32,8 @@ This report covers an assignment on implementing A* algorithm on ROS and matlab 
 ## Performance Analysis
 I explored the influence of heuristic and tie-breaker to the performance of A* algorithm. I ran experiments in a non-obstacle environment for eliminating the bias caused by random maps. Wesee the quadratic of euclidean distance works better than other heuristics. The reason could be that the greediness of the heuristic determines the time consuming of the motion planning process, especially in a non-obstcale environment. To confirm that I used a large random scale as tie-breaker, so that the heu value is far greater than g(n). The result is quite interesting, it took only 1.31ms to find the path
 
-####*Without Tie-Breaker*
 ![](img/withoutTieBreaker.png)
-
+.center[Without Tie-Breaker]
 ####*With Tie-Breaker*
 ![](img/withtie_breaker.png "3D Case")
 
