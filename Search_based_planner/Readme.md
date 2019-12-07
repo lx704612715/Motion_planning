@@ -25,7 +25,10 @@ This report covers an assignment on implementing A* algorithm on ROS and matlab 
 + End Loop
 + Optimal path can be found by recursively searching the parent node of terminatePtr
 
-####Result in 3D Case
+<p align="center">
+  <b>With Result in 3D Space:</b><br>
+</p>
+
 ![](img/3d.jpg "3D Case")
 
 ## Performance Analysis
@@ -40,11 +43,13 @@ I explored the influence of heuristic and tie-breaker to the performance of A* a
 <p align="center">
   <b>With Tie-Breaker:</b><br>
 </p>
+
 ![](img/withtie_breaker.png "3D Case")
 
 <p align="center">
   <b>Result:</b><br>
 </p>
+
 ![](img/Result.png "3D Case")
 
 |Method| Heuristic | Tie breaker | Visited nodes | Running time |
