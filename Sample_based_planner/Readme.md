@@ -1,8 +1,9 @@
 # <center>Sampling-Based Path Finding</center>
 ## Introduction
-This report covers an implementing of Rapidly-exploring random tree (RRT) algorithm on ROS with The Open Motion Planning Library (OMPL) and RRT* algorithm on MATLAB environment.
+This report covers an implementing of the Rapidly-exploring random tree (RRT) algorithm on ROS with The Open Motion Planning Library (OMPL) and RRT* algorithm on MATLAB environment.
 
-###Preliminaries Sampling Based-Planners
+### Preliminaries Sampling Based-Planners
+
 * Learning phase 
   * Sample N points in C-Space
   * Delete points that are not collision-free
@@ -10,7 +11,7 @@ This report covers an implementing of Rapidly-exploring random tree (RRT) algori
 
 * Query phase
   * Search on the road map to find a path, search-based path finding algorithms e.g. A* can be used
-  * Similified grid map is more efficient 
+  * Simplified grid map is more efficient 
 
 ## Implementation in MATLAB 
 
@@ -19,7 +20,7 @@ This report covers an implementing of Rapidly-exploring random tree (RRT) algori
 + Initialize Tree with Xinit
 + for i=1 to N do
   + Xrand <- Sample(M), randomly sample points in Map
-  + Xnears <- Near(Xrand, T) find the nearst point to Xrand
+  + Xnears <- Near(Xrand, T) find the nearest point to Xrand
   + Xnew <- Steer(Xrand, Xnear, StepSize), expand Xnew from Xrand to Xnear if the Xrand is far away from Xnear
   + Ei <- Edge(Xnew, Xnear), add Edge between Xnew and Xnear
   + If CollisionFree(M, Ei) then 
@@ -31,15 +32,15 @@ This report covers an implementing of Rapidly-exploring random tree (RRT) algori
 
 #### Extension of RRT
 * Towards improving efficiency 
-  * Find nearst points with Kd-tree
+  * Find the nearest point with Kd-tree
 * Towards path planning efficiency
-  * Bidrectional RRT
-* Towardss improve the path quality
+  * Bidirectional RRT
+* Towards improve the path quality
   * RRTstar
 
 #### RRTstar Algorithm Pipeline
 + Input Map, Xinit and Xgoal
-+ Initialize Tree with Xinit and path cost for each points
++ Initialize Tree with Xinit and path cost for each point
 + for i=1 to N do
   + Xrand <- Sample(M), randomly sample points in Map
   + Xnears <- Near(Xrand, T) find the nearst point to Xrand
@@ -80,7 +81,7 @@ This report covers an implementing of Rapidly-exploring random tree (RRT) algori
 The Implementation of RRTstar on ROS is based on OMPL.
 
 ### Coding Details
-* In the ROS enviroment we have cube collisions which are visualized as gray boxes. To reflect the enviroment, we use <code>ompl::base::RealVectorStateSpace</code> to represent state informations like positions and define a state validity checker to do collision check
+* In the ROS environment we have cube collisions that are visualized as gray boxes. To reflect the environment, we use <code>ompl::base::RealVectorStateSpace</code> to represent state information like positions and define a state validity checker to check the collision
 ```c++
 class ValidityChecker : public ob::StateValidityChecker
 {
