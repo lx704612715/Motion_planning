@@ -38,13 +38,12 @@ I explored the influence of heuristic and tie-breaker to the performance of A* a
 <p align="center">
   <b>Without Tie-Breaker:</b><br>
 </p>
-
-![](img/withoutTieBreaker.png)
+<img src="img/withoutTieBreaker.png" width="640" height="480" />
 <p align="center">
   <b>With Tie-Breaker:</b><br>
 </p>
 
-![](img/withtie_breaker.png "3D Case")
+<img src="img/withtie_breaker.png" width="640" height="480" />
 
 <p align="center">
   <b>Result:</b><br>
@@ -66,7 +65,6 @@ I explored the influence of heuristic and tie-breaker to the performance of A* a
 
 ## Implementation in MATLAB
 
-![](img/1.PNG "3D Case")
-![](img/2.PNG "3D Case")
-![](img/3.PNG "3D Case")
-
+<img src="img/1.PNG" width="640" height="480" />
+<img src="img/2.PNG" width="640" height="480" />
+<img src="img/3.PNG" width="640" height="480" />
